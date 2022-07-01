@@ -28,6 +28,20 @@
                     Eligendi necessitatibus blanditiis officia, odio deleniti natus molestiae fugiat ex quod vel aliquam illum.
                 </p>
             </section>
+            <section>
+                <ul>
+                    <li th:each="thing: ${post.hashtags}">
+                        <a th:text="${thing.hashtag}" th:href="'/hashtags/' + ${thing.id}">asdf</a>
+                    </li>
+                </ul>
+            </section>
+            <section class = "add-hashtag">
+                <form th:action="'/posts/' + ${post.id} + '/addHashtag'" method="post">
+                    <input type="text" placeholder="Add hashtag here..." name="hashtag" id="hashtag">
+                    <button type="submit" class="button">Submit Review</button>
+
+                </form>
+            </section>
         </main>
     </div>
 
