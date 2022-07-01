@@ -34,6 +34,8 @@ public class Topic {
         return posts;
     }
 
+
+
     @Override
     public String toString() {
         return "Topic{" +
@@ -58,5 +60,9 @@ public class Topic {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    public void addPost(Post post){
+        posts.add(post);
     }
 }

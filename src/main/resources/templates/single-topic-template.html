@@ -31,6 +31,20 @@
                 </div>
             </nav>
         </section>
+        <section class = "enter-post">
+
+            <form th:action="'/topics/' + ${topic.id} + '/addPost'" method="post">
+                <input type="text" placeholder="Add title here..." name="title" id="title">
+                <input type="text" placeholder="Add author here..." name="author" id="author">
+                <input type="text" placeholder="Add content here..." name="content" id="content">
+                <button type="submit" class="button">Submit Post</button>
+
+
+
+            </form>
+
+        </section>
+
     </main>
 </div>
 </body>
